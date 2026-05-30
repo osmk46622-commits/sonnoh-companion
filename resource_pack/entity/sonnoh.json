@@ -1,0 +1,46 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "sonnoh:sonnoh",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/sonnoh_white",
+        "white": "textures/entity/sonnoh_white",
+        "blue": "textures/entity/sonnoh_blue",
+        "red": "textures/entity/sonnoh_red",
+        "green": "textures/entity/sonnoh_green",
+        "yellow": "textures/entity/sonnoh_yellow",
+        "black": "textures/entity/sonnoh_black"
+      },
+      "geometry": {
+        "default": "geometry.sonnoh"
+      },
+      "animations": {
+        "walk": "animation.sonnoh.walk",
+        "idle": "animation.sonnoh.idle",
+        "sit": "animation.sonnoh.sit",
+        "pet": "animation.sonnoh.pet",
+        "hug": "animation.sonnoh.hug",
+        "ear_flick": "animation.sonnoh.ear_flick",
+        "sleep": "animation.sonnoh.sleep"
+      },
+      "animation_controllers": [
+        {
+          "move": "controller.animation.sonnoh.move"
+        },
+        {
+          "sitting": "controller.animation.sonnoh.sitting"
+        },
+        {
+          "expressions": "controller.animation.sonnoh.expressions"
+        }
+      ],
+      "render_controllers": [
+        "controller.render.sonnoh"
+      ]
+    }
+  }
+}

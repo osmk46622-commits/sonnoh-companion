@@ -1,0 +1,228 @@
+{
+  "format_version": "1.0.0",
+  "minecraft:npc_dialogue": {
+    "scenes": [
+      {
+        "name": "sonnoh_greet_white",
+        "participants": [
+          {
+            "name": "sonnoh"
+          },
+          {
+            "name": "player"
+          }
+        ],
+        "lines": [
+          {
+            "speaker": "sonnoh",
+            "text": "mrrp! hello there! 🐱"
+          }
+        ]
+      },
+      {
+        "name": "sonnoh_greet_blue",
+        "participants": [
+          {
+            "name": "sonnoh"
+          },
+          {
+            "name": "player"
+          }
+        ],
+        "lines": [
+          {
+            "speaker": "sonnoh",
+            "text": "meow? what's that? 😺"
+          }
+        ]
+      },
+      {
+        "name": "sonnoh_greet_red",
+        "participants": [
+          {
+            "name": "sonnoh"
+          },
+          {
+            "name": "player"
+          }
+        ],
+        "lines": [
+          {
+            "speaker": "sonnoh",
+            "text": "hiss! stay alert! 😾"
+          }
+        ]
+      },
+      {
+        "name": "sonnoh_greet_green",
+        "participants": [
+          {
+            "name": "sonnoh"
+          },
+          {
+            "name": "player"
+          }
+        ],
+        "lines": [
+          {
+            "speaker": "sonnoh",
+            "text": "purr... the forest is beautiful 🌿"
+          }
+        ]
+      },
+      {
+        "name": "sonnoh_greet_yellow",
+        "participants": [
+          {
+            "name": "sonnoh"
+          },
+          {
+            "name": "player"
+          }
+        ],
+        "lines": [
+          {
+            "speaker": "sonnoh",
+            "text": "MEOW MEOW! let's play! ⚡"
+          }
+        ]
+      },
+      {
+        "name": "sonnoh_greet_black",
+        "participants": [
+          {
+            "name": "sonnoh"
+          },
+          {
+            "name": "player"
+          }
+        ],
+        "lines": [
+          {
+            "speaker": "sonnoh",
+            "text": "...meow? *ear twitch* 😸"
+          }
+        ]
+      },
+      {
+        "name": "sonnoh_tamed",
+        "participants": [
+          {
+            "name": "sonnoh"
+          },
+          {
+            "name": "player"
+          }
+        ],
+        "lines": [
+          {
+            "speaker": "sonnoh",
+            "text": "*purrs loudly* you're my human now! 💕"
+          }
+        ]
+      },
+      {
+        "name": "sonnoh_follow",
+        "participants": [
+          {
+            "name": "sonnoh"
+          },
+          {
+            "name": "player"
+          }
+        ],
+        "lines": [
+          {
+            "speaker": "sonnoh",
+            "text": "okay! i'll follow you! 🐾"
+          }
+        ]
+      },
+      {
+        "name": "sonnoh_danger_red",
+        "participants": [
+          {
+            "name": "sonnoh"
+          },
+          {
+            "name": "player"
+          }
+        ],
+        "lines": [
+          {
+            "speaker": "sonnoh",
+            "text": "danger nearby... stay close to me! ⚠️"
+          }
+        ]
+      },
+      {
+        "name": "sonnoh_happy",
+        "participants": [
+          {
+            "name": "sonnoh"
+          },
+          {
+            "name": "player"
+          }
+        ],
+        "lines": [
+          {
+            "speaker": "sonnoh",
+            "text": "*purrs happily* you're the best! 😻"
+          }
+        ]
+      },
+      {
+        "name": "sonnoh_tired",
+        "participants": [
+          {
+            "name": "sonnoh"
+          },
+          {
+            "name": "player"
+          }
+        ],
+        "lines": [
+          {
+            "speaker": "sonnoh",
+            "text": "meow... *yawn* i need to sleep 😴"
+          }
+        ]
+      },
+      {
+        "name": "sonnoh_neglected",
+        "participants": [
+          {
+            "name": "sonnoh"
+          },
+          {
+            "name": "player"
+          }
+        ],
+        "lines": [
+          {
+            "speaker": "sonnoh",
+            "text": "*HISSS* you forgot about me! 😾"
+          }
+        ]
+      },
+      {
+        "name": "sonnoh_lab_red",
+        "participants": [
+          {
+            "name": "sonnoh"
+          },
+          {
+            "name": "player"
+          }
+        ],
+        "lines": [
+          {
+            "speaker": "sonnoh",
+            "text": "you found me... i've been waiting... 🔴"
+          }
+        ]
+      }
+    ]
+  }
+}

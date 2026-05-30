@@ -1,0 +1,83 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.sonnoh.move": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "walk": "query.modified_move_speed > 0.0"
+            }
+          ]
+        },
+        "walk": {
+          "blend_transition": 0.2,
+          "animations": ["walk"],
+          "transitions": [
+            {
+              "default": "query.modified_move_speed < 0.0"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.sonnoh.sitting": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "sitting": "query.is_sitting"
+            }
+          ]
+        },
+        "sitting": {
+          "animations": ["sit"],
+          "transitions": [
+            {
+              "default": "!query.is_sitting"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.sonnoh.expressions": {
+      "states": {
+        "neutral": {
+          "transitions": [
+            {
+              "happy": "query.health > 15"
+            },
+            {
+              "sad": "query.health < 10 && query.health > 5"
+            },
+            {
+              "angry": "query.health < 5"
+            }
+          ]
+        },
+        "happy": {
+          "animations": ["ear_flick"],
+          "transitions": [
+            {
+              "neutral": "query.health <= 15 || query.health >= 10"
+            }
+          ]
+        },
+        "sad": {
+          "transitions": [
+            {
+              "neutral": "query.health >= 10 || query.health <= 5"
+            }
+          ]
+        },
+        "angry": {
+          "transitions": [
+            {
+              "sad": "query.health >= 5"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

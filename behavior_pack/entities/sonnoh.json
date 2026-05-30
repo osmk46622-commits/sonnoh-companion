@@ -1,0 +1,223 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "sonnoh:sonnoh",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "sonnoh_base": {
+        "minecraft:type_family": {
+          "family": ["cat", "pet", "mob"]
+        },
+        "minecraft:health": {
+          "value": 20,
+          "max": 20
+        },
+        "minecraft:experience_reward": {
+          "on_death": "query.last_hit_by_player ? 10 : 0"
+        },
+        "minecraft:loot": {
+          "table": "loot_tables/empty"
+        },
+        "minecraft:collision_box": {
+          "width": 0.4,
+          "height": 0.5
+        },
+        "minecraft:physics": {},
+        "minecraft:pushable": {
+          "is_pushable": true,
+          "is_pushable_by_piston": true
+        },
+        "minecraft:nameable": {}
+      },
+      "sonnoh_wild": {
+        "minecraft:tameable": {
+          "probability": 0.33,
+          "tame_items": ["fish", "salmon"],
+          "tame_event": "sonnoh:on_tame"
+        }
+      },
+      "sonnoh_tamed": {
+        "minecraft:owner": {},
+        "minecraft:behavior.follow_owner": {
+          "priority": 4,
+          "speed_multiplier": 1.0,
+          "start_distance": 8,
+          "stop_distance": 2
+        },
+        "minecraft:behavior.sit": {
+          "priority": 5
+        }
+      },
+      "sonnoh_white": {
+        "sonnoh:personality": "white"
+      },
+      "sonnoh_blue": {
+        "sonnoh:personality": "blue"
+      },
+      "sonnoh_red": {
+        "sonnoh:personality": "red"
+      },
+      "sonnoh_green": {
+        "sonnoh:personality": "green"
+      },
+      "sonnoh_yellow": {
+        "sonnoh:personality": "yellow"
+      },
+      "sonnoh_black": {
+        "sonnoh:personality": "black"
+      },
+      "sonnoh_happy": {
+        "sonnoh:emotional_state": "happy"
+      },
+      "sonnoh_neutral": {
+        "sonnoh:emotional_state": "neutral"
+      },
+      "sonnoh_sad": {
+        "sonnoh:emotional_state": "sad"
+      },
+      "sonnoh_angry": {
+        "sonnoh:emotional_state": "angry"
+      }
+    },
+    "components": {
+      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:type_family": {
+        "family": ["cat", "pet"]
+      },
+      "minecraft:health": {
+        "value": 20,
+        "max": 20
+      },
+      "minecraft:collision_box": {
+        "width": 0.4,
+        "height": 0.5
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:nameable": {},
+      "minecraft:owner": {},
+      "minecraft:behavior.player_follow": {
+        "priority": 3,
+        "speed_multiplier": 1.0,
+        "search_range": 16
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 9,
+        "look_distance": 32
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 10,
+        "speed_multiplier": 0.5
+      },
+      "minecraft:behavior.idle": {
+        "priority": 11
+      },
+      "minecraft:tameable": {
+        "probability": 0.33,
+        "tame_items": ["fish", "salmon"],
+        "tame_event": "sonnoh:on_tame"
+      },
+      "minecraft:leashable": {
+        "soft_distance": 4.0,
+        "hard_distance": 6.0,
+        "max_distance": 10.0
+      },
+      "minecraft:rideable": {
+        "seat_count": 0
+      },
+      "minecraft:animation.sonnoh_idle": {
+        "anim": "animation.sonnoh.idle"
+      },
+      "minecraft:animation.sonnoh_walk": {
+        "anim": "animation.sonnoh.walk"
+      },
+      "minecraft:animation.sonnoh_sit": {
+        "anim": "animation.sonnoh.sit"
+      },
+      "minecraft:animation.sonnoh_pet": {
+        "anim": "animation.sonnoh.pet"
+      },
+      "minecraft:animation.sonnoh_hug": {
+        "anim": "animation.sonnoh.hug"
+      },
+      "minecraft:animation.sonnoh_ear_flick": {
+        "anim": "animation.sonnoh.ear_flick"
+      },
+      "minecraft:animation.sonnoh_sleep": {
+        "anim": "animation.sonnoh.sleep"
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "randomize": [
+          {
+            "weight": 1,
+            "add": {
+              "component_groups": ["sonnoh_white", "sonnoh_wild", "sonnoh_neutral"]
+            }
+          },
+          {
+            "weight": 1,
+            "add": {
+              "component_groups": ["sonnoh_blue", "sonnoh_wild", "sonnoh_neutral"]
+            }
+          },
+          {
+            "weight": 1,
+            "add": {
+              "component_groups": ["sonnoh_red", "sonnoh_wild", "sonnoh_neutral"]
+            }
+          },
+          {
+            "weight": 1,
+            "add": {
+              "component_groups": ["sonnoh_green", "sonnoh_wild", "sonnoh_neutral"]
+            }
+          },
+          {
+            "weight": 1,
+            "add": {
+              "component_groups": ["sonnoh_yellow", "sonnoh_wild", "sonnoh_neutral"]
+            }
+          },
+          {
+            "weight": 1,
+            "add": {
+              "component_groups": ["sonnoh_black", "sonnoh_wild", "sonnoh_neutral"]
+            }
+          }
+        ]
+      },
+      "sonnoh:on_tame": {
+        "add": {
+          "component_groups": ["sonnoh_tamed", "sonnoh_happy"]
+        },
+        "remove": {
+          "component_groups": ["sonnoh_wild"]
+        }
+      },
+      "sonnoh:on_pet": {
+        "add": {
+          "component_groups": ["sonnoh_happy"]
+        }
+      },
+      "sonnoh:on_neglect": {
+        "add": {
+          "component_groups": ["sonnoh_sad"]
+        }
+      },
+      "sonnoh:on_low_care": {
+        "add": {
+          "component_groups": ["sonnoh_angry"]
+        }
+      }
+    }
+  }
+}

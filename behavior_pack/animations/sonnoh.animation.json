@@ -1,0 +1,256 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.sonnoh.idle": {
+      "anim_time_update": "query.modified_move_speed",
+      "loop": true,
+      "bones": {
+        "body": {
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0]
+        },
+        "head": {
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0]
+        },
+        "left_ear": {
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0]
+        },
+        "right_ear": {
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0]
+        }
+      }
+    },
+    "animation.sonnoh.walk": {
+      "anim_time_update": "query.modified_move_speed",
+      "loop": true,
+      "bones": {
+        "body": {
+          "position": ["Math.sin(query.anim_time * 5) * 0.1", "-0.2", 0],
+          "rotation": [0, 0, 0]
+        },
+        "head": {
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0]
+        },
+        "left_front_leg": {
+          "rotation": ["Math.sin(query.anim_time * 5) * 25", 0, 0]
+        },
+        "right_front_leg": {
+          "rotation": ["Math.sin(query.anim_time * 5 + 3.14) * 25", 0, 0]
+        },
+        "left_back_leg": {
+          "rotation": ["Math.sin(query.anim_time * 5 + 3.14) * 25", 0, 0]
+        },
+        "right_back_leg": {
+          "rotation": ["Math.sin(query.anim_time * 5) * 25", 0, 0]
+        }
+      }
+    },
+    "animation.sonnoh.sit": {
+      "loop": false,
+      "bones": {
+        "body": {
+          "position": [0, "-0.5", 0],
+          "rotation": [0, 0, 0]
+        },
+        "left_front_leg": {
+          "position": [0, "-0.3", 0],
+          "rotation": [45, 0, 0]
+        },
+        "right_front_leg": {
+          "position": [0, "-0.3", 0],
+          "rotation": [45, 0, 0]
+        },
+        "left_back_leg": {
+          "position": [0, "-0.3", 0],
+          "rotation": [90, 0, 0]
+        },
+        "right_back_leg": {
+          "position": [0, "-0.3", 0],
+          "rotation": [90, 0, 0]
+        },
+        "tail": {
+          "rotation": [30, 0, 0]
+        }
+      }
+    },
+    "animation.sonnoh.pet": {
+      "loop": false,
+      "length": 1.0,
+      "bones": {
+        "head": {
+          "rotation": [
+            {
+              "time": 0,
+              "value": [0, 0, 0]
+            },
+            {
+              "time": 0.25,
+              "value": [-10, 0, 0]
+            },
+            {
+              "time": 0.5,
+              "value": [0, 0, 0]
+            },
+            {
+              "time": 0.75,
+              "value": [-5, 0, 0]
+            },
+            {
+              "time": 1.0,
+              "value": [0, 0, 0]
+            }
+          ]
+        }
+      }
+    },
+    "animation.sonnoh.hug": {
+      "loop": false,
+      "length": 2.0,
+      "bones": {
+        "body": {
+          "position": [
+            {
+              "time": 0,
+              "value": [0, 0, 0]
+            },
+            {
+              "time": 1.0,
+              "value": [0, "-0.2", "-0.3"]
+            },
+            {
+              "time": 2.0,
+              "value": [0, 0, 0]
+            }
+          ]
+        },
+        "left_front_leg": {
+          "rotation": [
+            {
+              "time": 0,
+              "value": [0, 0, 0]
+            },
+            {
+              "time": 1.0,
+              "value": [-30, 0, 20]
+            },
+            {
+              "time": 2.0,
+              "value": [0, 0, 0]
+            }
+          ]
+        },
+        "right_front_leg": {
+          "rotation": [
+            {
+              "time": 0,
+              "value": [0, 0, 0]
+            },
+            {
+              "time": 1.0,
+              "value": [-30, 0, -20]
+            },
+            {
+              "time": 2.0,
+              "value": [0, 0, 0]
+            }
+          ]
+        }
+      }
+    },
+    "animation.sonnoh.ear_flick": {
+      "loop": true,
+      "length": 1.0,
+      "bones": {
+        "left_ear": {
+          "rotation": [
+            {
+              "time": 0,
+              "value": [0, 0, 0]
+            },
+            {
+              "time": 0.2,
+              "value": [-15, 0, -10]
+            },
+            {
+              "time": 0.4,
+              "value": [0, 0, 0]
+            },
+            {
+              "time": 0.6,
+              "value": [-10, 0, -5]
+            },
+            {
+              "time": 0.8,
+              "value": [0, 0, 0]
+            },
+            {
+              "time": 1.0,
+              "value": [0, 0, 0]
+            }
+          ]
+        },
+        "right_ear": {
+          "rotation": [
+            {
+              "time": 0,
+              "value": [0, 0, 0]
+            },
+            {
+              "time": 0.3,
+              "value": [-15, 0, 10]
+            },
+            {
+              "time": 0.5,
+              "value": [0, 0, 0]
+            },
+            {
+              "time": 0.7,
+              "value": [-10, 0, 5]
+            },
+            {
+              "time": 0.9,
+              "value": [0, 0, 0]
+            },
+            {
+              "time": 1.0,
+              "value": [0, 0, 0]
+            }
+          ]
+        }
+      }
+    },
+    "animation.sonnoh.sleep": {
+      "loop": true,
+      "length": 2.0,
+      "bones": {
+        "body": {
+          "position": [0, "-0.4", 0],
+          "rotation": [90, 0, 0]
+        },
+        "head": {
+          "position": [0, "0.1", "-0.2"],
+          "rotation": [0, 0, 0]
+        },
+        "left_front_leg": {
+          "rotation": [90, 0, 0]
+        },
+        "right_front_leg": {
+          "rotation": [90, 0, 0]
+        },
+        "left_back_leg": {
+          "rotation": [90, 0, 0]
+        },
+        "right_back_leg": {
+          "rotation": [90, 0, 0]
+        },
+        "tail": {
+          "rotation": [0, 0, 90]
+        }
+      }
+    }
+  }
+}
